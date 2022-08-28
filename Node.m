@@ -45,7 +45,7 @@ classdef Node
              else
                  N = cell(height(prob), 1); % Create a cell array by pre-allocating
                 for index = 1:height(prob)
-                    new_node = Node(prob(index), name(index));
+                    new_node = Node(prob(index), name{index});
                     N{index, 1} = new_node;
                     if nargin ~= 2
                        N{index, 1}.left_node = left_node;
